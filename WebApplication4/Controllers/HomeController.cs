@@ -16,14 +16,7 @@ namespace WebApplication4.Controllers
         [Route("Hello")]
         public IActionResult Index3()
         {
-            Employee emp = new Employee()
-            {
-                Id = 1,
-                Name = "Abdalla",
-                Description = "Hello",
-                Title = "Back End Developer"
-            };
-            return Json(emp);
+            return Json("Abdalla");
         }
     }
 }
