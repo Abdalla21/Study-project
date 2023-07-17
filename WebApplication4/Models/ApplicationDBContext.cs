@@ -5,9 +5,6 @@ namespace StudyProject.Models
 {
     public class ApplicationDBContext : DbContext
     {
-
-        public DbSet<Employee> employees { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
@@ -29,6 +26,8 @@ namespace StudyProject.Models
                 .Property(c => c.CompanyName)
                 .HasColumnName("CompanyTitle");
         }
+
+        public DbSet<Employee> employees { get; set; }
     }
 }
 
