@@ -1,10 +1,14 @@
-using WebApplication4.Middlewares;
+//using WebApplication4.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllers();
+
 var app = builder.Build();
 
 app.MapControllers();
+
+#region Comments
 
 /*
 //app.UseSumMiddleware();
@@ -39,5 +43,7 @@ app.MapControllers();
 //        });
 //    });
 */
+
+#endregion
 
 app.Run();
